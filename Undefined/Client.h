@@ -1,3 +1,4 @@
+/*
 #ifndef VOLKSMARKET_CLIENT_H
 #define VOLKSMARKET_CLIENT_H
 
@@ -43,3 +44,4 @@ public:
 
 
 #endif //VOLKSMARKET_CLIENT_H
+*/

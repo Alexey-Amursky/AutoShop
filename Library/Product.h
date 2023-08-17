@@ -5,8 +5,8 @@
 
 class Product {
 private:
-    string _name = "";
-    string _manufacturer = "";
+    string _name = " ";
+    string _manufacturer = " ";
     double _costPrice = 0;
     double _salePrice = 0;
     int _quantity = 0;

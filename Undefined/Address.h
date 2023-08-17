@@ -1,3 +1,4 @@
+/*
 #ifndef VOLKSMARKET_ADDRESS_H
 #define VOLKSMARKET_ADDRESS_H
 
@@ -56,3 +57,4 @@ public:
 
 
 #endif
+*/
