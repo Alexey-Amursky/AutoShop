@@ -9,6 +9,20 @@
 #include "Menu.h"
 
 
+Product SearchProduct (Products products){
+    Product* product;
+
+    for (auto item : products) {
+        if (item == product){
+            return *product;
+        } else {
+            cerr << "Товар не найден!" << endl;
+        }
+    }
+
+
+}
+
 int CountElementInFile (string path) {
     ifstream fin(path);
     int count;

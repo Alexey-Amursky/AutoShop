@@ -17,7 +17,7 @@ Product *Product::Clone(Product *product) {
     return new Product(_name, _manufacturer, _costPrice,  _salePrice,  _quantity);
 }
 
-void Product::Print() {
+void Product::PrintToConsole() {
     if(_name != ""){
         cout << "Товар: " << _name << endl;
         cout << "Производитель: " << _manufacturer << endl;

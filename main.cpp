@@ -6,7 +6,7 @@
 
 int main() {
 
-    string path = "D:\\Programming projects\\C++ projects\\VolksMarket\\Files\\Products.csv";
+    string path = "D:\\Programming projects\\C++ projects\\VolksMarket\\Files\\ProductsForRead.csv";
 
     Products products;
 
@@ -14,12 +14,6 @@ int main() {
 
     products.push_back(engine);
 
-
-
-
-    SaveProductToFile(products, path);
-
-   // ReadAndPrintProductsFromFile(path);
 
     return 0;
 }

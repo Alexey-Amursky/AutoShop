@@ -15,7 +15,7 @@ public:
     Product(const string &name, const string &manufacturer, double costPrice, double salePrice, int quantity);
     ~Product();
 
-    void Print();
+    void PrintToConsole();
     void SetParametres (string name, string manufacturer, double costPrice, double salePrice, int quantity);
 
     Product *Clone(Product* product);

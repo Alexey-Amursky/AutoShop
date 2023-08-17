@@ -10,8 +10,11 @@ private:
     Product* _product;
     Date* _date;
 public:
-    Order(Product *product, Date *date) :
-    _product(product), _date(date) {};
+    Order();
+    Order(Product *product, Date *date);
+    ~Order();
+
+
 
     Product *getProduct() const {
         return _product;
@@ -29,15 +32,7 @@ public:
         Order::_date = date;
     }
 
-    Order* AddProductToOrder (Product* product){
-        return new Product( _name, string manufacturer, double costPrice, double salePrice, int quantity);
-    }
-
-    void removeProductFromOrder(Product* product) {
-        if (this->_product == product) {
-            this->_product = nullptr;
-        }
-    }
+    void PrintCheckToConsole ();
 };
 
 

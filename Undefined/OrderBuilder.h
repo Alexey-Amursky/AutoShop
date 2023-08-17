@@ -1,3 +1,4 @@
+/*
 #ifndef VOLKSMARKET_ORDERBUILDER_H
 #define VOLKSMARKET_ORDERBUILDER_H
 
@@ -36,10 +37,13 @@ public:
         return *this;
     }
 
+*/
 /*    Order Build() {
         return new *_order;
-    }*/
+    }*//*
+
 };
 
 
 #endif //VOLKSMARKET_ORDERBUILDER_H
+*/
