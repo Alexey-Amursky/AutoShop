@@ -39,11 +39,6 @@ public:
         return *this;
     }
 
-    Date SetFullDate (Date* date) {
-        date->SetDay(_day).SetMonth(_month).SetYear(_year);
-        return *this;
-    }
-
     void ToString() {
         cout << to_string(_day) << "." << to_string(_month) << "." << to_string(_year);
     }

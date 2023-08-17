@@ -5,20 +5,22 @@
 
 class Product {
 private:
-    string _name = " ";
-    string _manufacturer = " ";
-    double _costPrice = 0;
-    double _salePrice = 0;
-    int _quantity = 0;
+    string _name;
+    string _manufacturer;
+    double _costPrice;
+    double _salePrice;
+    int _quantity;
 public:
-    Product() = default;
-    Product(const string &name, const string &manufacturer, double costPrice, double salePrice, int quantity) :
-    _name(name), _manufacturer(manufacturer), _costPrice(costPrice), _salePrice(salePrice), _quantity(quantity) {};
+    Product();
+    Product(const string &name, const string &manufacturer, double costPrice, double salePrice, int quantity);
+    ~Product();
 
-    Product *Clone(Product* product){
-        return new Product(_name, _manufacturer, _costPrice,  _salePrice,  _quantity);
-    }
+    void Print();
+    void SetParametres (string name, string manufacturer, double costPrice, double salePrice, int quantity);
 
+    Product *Clone(Product* product);
+
+#pragma region GettersAndSetters;
     const string &getName() const {
         return _name;
     }
@@ -63,6 +65,11 @@ public:
         _quantity = quantity;
         return *this;
     }
+
+#pragma endregion;
+
+    void AddToFileForRead(string path);
+    void AddToFileForWrite(string path);
 };
 
 using Products = vector<Product*>;

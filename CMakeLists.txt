@@ -7,13 +7,13 @@ add_executable(VolksMarket main.cpp
         includer.h
         Library/Product.h
         Library/Menu.h
-        Library/ProductBuilder.h
-        Library/FileManager.h
+        Undefined/ProductBuilder.h
         Library/Order.h
         Undefined/Client.h
         Library/Date.h
         Undefined/Address.h
-        Library/OrderBuilder.h
+        Undefined/OrderBuilder.h
         Library/Functions.h
         AutoShop.h
+        Library/Product.cpp
 )
