@@ -1,0 +1,176 @@
+@startuml
+enum Category {
+engine,
+body,
+chassis
+}
+
+Category <-- Product
+class Product {
+- index : int
+- category : Category
+- name : string
+- manufacturer : string
+- description : string
+- costPrice : double
+- salePrice : double
+- quantity : int
+
++ Product(index : int, category : Category, name : string, manufacturer : string, description : string, costPrice : double, salePrice : double, quantity : int)
+
++ getCategory() : Category
++ getName() : string
++ getManufacturer() : string
++ getDescription() : string
++ getCostPrice() : double
++ getSalePrice() : double
++ getQuantity() : int
+
++ setCategory(category : Category) : void
++ setName(name : string) : void
++ setManufacturer(manufacturer : string) : void
++ setDescription(description : string) : void
++ setCostPrice(costPrice : double) : void
++ setSalePrice(salePrice : double) : void
++ setQuantity(quantity : int) : void
+}
+
+Product <-- ProductBuilder
+class ProductBuilder {
+- product : Product*
+
++ ProductBuilder() = default
+
++ getCategory() : Category
++ getName() : string
++ getManufacturer() : string
++ getDescription() : string
++ getCostPrice() : double
++ getSalePrice() : double
++ getQuantity() : int
+
++ setCategory(category : Category) : Product
++ setName(name : string) : Product
++ setManufacturer(manufacturer : string) : Product
++ setDescription(description : string) : Product
++ setCostPrice(costPrice : double) : Product
++ setSalePrice(salePrice : double) : Product
++ setQuantity(quantity : int) : Product
+
++ Product* CreateProduct() {
+    return new Product (category : Category, name : string, manufacturer : string, description : string, costPrice : double, salePrice : double, quantity : int)
+    };
+}
+
+class Client {
+- firstName : string
+- lastName : string
+- email : string
+- phone : string
+
++ Client(firstName : string, lastName : string, email : string, phone : string)
+
++getFirstName() : string
++getLastName() : string
++getEmail() : string
++getPhone() : string
+
++setFirstName(firstName:string) : void
++setLastName(lastName:string) : void
++setEmail(email:string) : void
++setPhone(phone:string) : void
+
+}
+
+class Date {
+- day : string
+- month : string
+- year : sting
+
++ Date(day:string, month : string, year : string)
+
++getDay() : string
++getMonth() : string
++getYear() : string
+
++ setDay(day : string) : void
++ setMonth(month : string) : void
++ setYear(year : string) : void
+}
+
+class Address {
+- country : string
+- region : string
+- city : string
+- street : string
+- home : string
+- building : string
+- appartment : string
+
++ Address(country : string, region : string, city : string, street : string, home : string, building : string, appartment : string)
+
++ getCountry() : string
++ getRegion() : string
++ getCity() : string
++ getStreet() : string
++ getHome() : string
++ getBuilding() : string
++ getAppartment() : string
+
++ setCountry(country : string) : void
++ setRegion(region : string) : void
++ setCity(city : string) : void
++ setStreet(street : string) : void
++ setHome(home : string) : void
++ setBuilding(building : string) : void
++ setAppartment(appartment : string) : void
+}
+
+enum PaymentMethod {
+CASH,
+CARD,
+CASHLESS_PAYMENT
+}
+
+Product <--o Order
+Client <--o Order
+Date <--o Order
+Address <--o Order
+PaymentMethod <-- Order
+class Order {
+- product : Product
+- client : Client
+- date : Date
+- address : Address
+- paymentMethod : PaymentMethod
+
++ Order (product : Product, client : Client, date : Date, address : Address, paymentMethod : PaymentMethod)
+
++ getProduct() : Product
++ getClient() : Client
++ getDate() : Date
++ getAddress() : Address
++ getPaymentMethod() : PaymentMethod
+
++ setProduct(product : Product) : void
++ setClient(client : Client) : void
++ setDate(date : Date) : void
++ setAddress(address : Address) : void
++ setPaymentMethod(paymentMethod : PaymentMethod) : void
+}
+
+Order <-- OrderBuilder
+class OrderBuilder {
+- order : Order
+
++ Order ()
+
++ setProduct(product : Product) : void
++ setClient(client : Client) : void
++ setDate(date : Date) : void
++ setAddress(address : Address) : void
++ setPaymentMethod(paymentMethod : PaymentMethod) : void
+
++ Build() : Order
+}
+@enduml
