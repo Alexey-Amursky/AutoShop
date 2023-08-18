@@ -3,24 +3,22 @@
 
 #include "../includer.h"
 #include "Product.h"
-#include "Date.h"
+#include "../Undefined/Date.h"
 #include "Order.h"
 #include "../Undefined/OrderBuilder.h"
 #include "Menu.h"
 
 
-Product SearchProduct (Products products){
-    Product* product;
+Product SearchProduct (const Products* products, Product* searchedProduct){
 
-    for (auto item : products) {
-        if (item == product){
-            return *product;
+    for (const auto product : *products) {
+        if (product == searchedProduct){
+            return *searchedProduct;
         } else {
             cerr << "Товар не найден!" << endl;
+            return Product();
         }
     }
-
-
 }
 
 int CountElementInFile (string path) {
@@ -54,7 +52,7 @@ void ReadProductsFromFile(Product* product, string path) {
             fin >> costPrice;
             fin >> salePrice;
             fin >> quantity;
-            product[i].SetParametres(nameProduct, manufacturer, costPrice, salePrice, quantity);
+            product[i].SetParametres(i+1, nameProduct, manufacturer, costPrice, salePrice, quantity);
         }
     }
     fin.close();

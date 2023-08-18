@@ -2,10 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/AutoShop.h" charset="IBM866" />
-    <file url="file://$PROJECT_DIR$/Library/Date.h" charset="IBM866" />
     <file url="file://$PROJECT_DIR$/Library/FileManager.h" charset="IBM866" />
     <file url="file://$PROJECT_DIR$/Library/Order.h" charset="IBM866" />
     <file url="file://$PROJECT_DIR$/Library/Product.h" charset="IBM866" />
+    <file url="file://$PROJECT_DIR$/Undefined/Date.h" charset="IBM866" />
+    <file url="file://$PROJECT_DIR$/Undefined/Date.h" charset="IBM866" />
     <file url="file://$PROJECT_DIR$/Undefined/OrderBuilder.h" charset="IBM866" />
     <file url="file://$PROJECT_DIR$/Undefined/OrderBuilder.h" charset="IBM866" />
     <file url="file://$PROJECT_DIR$/main.cpp" charset="IBM866" />

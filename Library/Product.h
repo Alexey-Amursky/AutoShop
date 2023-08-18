@@ -5,6 +5,7 @@
 
 class Product {
 private:
+    int _id;
     string _name;
     string _manufacturer;
     double _costPrice;
@@ -12,56 +13,67 @@ private:
     int _quantity;
 public:
     Product();
-    Product(const string &name, const string &manufacturer, double costPrice, double salePrice, int quantity);
+    Product(int id, const string &name, const string &manufacturer, double costPrice, double salePrice, int quantity);
     ~Product();
 
     void PrintToConsole();
-    void SetParametres (string name, string manufacturer, double costPrice, double salePrice, int quantity);
+
+    void SetParametres (int id, string name, string manufacturer, double costPrice, double salePrice, int quantity);
 
     Product *Clone(Product* product);
 
 #pragma region GettersAndSetters;
-    const string &getName() const {
+
+    int GetId() {
+        return _id;
+    }
+
+    const string &GetName() const {
         return _name;
     }
 
-    const string &getManufacturer() const {
+    const string &GetManufacturer() const {
         return _manufacturer;
     }
 
-    double getCostPrice() const {
+    double GetCostPrice() const {
         return _costPrice;
     }
 
-    double getSalePrice() const {
+    double GetSalePrice() const {
         return _salePrice;
     }
 
-    int getQuantity() const {
+    int GetQuantity() const {
         return _quantity;
     }
 
-    Product setName(const string &name) {
+    Product SetId(int id) {
+        _id = id;
+        return *this;
+    }
+
+    Product SetName(const string &name) {
         _name = name;
         return *this;
     }
 
-    Product setManufacturer(const string &manufacturer) {
+    Product SetManufacturer(const string &manufacturer) {
         _manufacturer = manufacturer;
         return *this;
     }
 
-    Product setCostPrice(double costPrice) {
+    Product SetCostPrice(double costPrice) {
         _costPrice = costPrice;
         return *this;
     }
 
-    Product setSalePrice(double salePrice) {
+    Product SetSalePrice(double salePrice) {
         _salePrice = salePrice;
         return *this;
     }
 
-    Product setQuantity(int quantity) {
+    Product SetQuantity(int quantity) {
         _quantity = quantity;
         return *this;
     }

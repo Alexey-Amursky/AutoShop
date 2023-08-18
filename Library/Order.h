@@ -3,36 +3,46 @@
 
 #include "../includer.h"
 #include "Product.h"
-#include "Date.h"
 
 class Order {
 private:
+    int _numberOrder;
     Product* _product;
-    Date* _date;
+    string _date;
 public:
     Order();
-    Order(Product *product, Date *date);
+    Order(int num, Product *product, string date);
     ~Order();
 
+    void AddToHistory (Order* order, string path);
 
+    void PrintHistory (string path);
 
-    Product *getProduct() const {
+#pragma region GettersAndSetters
+
+    Product* GetProduct() const {
         return _product;
     }
 
-    Date *getDate() const {
+    string GetDate() const {
         return _date;
     }
 
-    void setProduct(Product *product) {
+    Order SetProduct(Product *product) {
         Order::_product = product;
+        return *this;
     }
 
-    void setDate(Date *date) {
+    Order SetDate(string date) {
         Order::_date = date;
+        return *this;
     }
+
+#pragma endregion;
 
     void PrintCheckToConsole ();
+
+    void PrintCheckToFile(string path);
 };
 
 

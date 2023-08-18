@@ -1,3 +1,4 @@
+/*
 #ifndef VOLKSMARKET_DATE_H
 #define VOLKSMARKET_DATE_H
 
@@ -46,3 +47,4 @@ public:
 
 
 #endif //VOLKSMARKET_DATE_H
+*/
